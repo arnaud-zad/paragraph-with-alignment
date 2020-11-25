@@ -36,6 +36,9 @@ class Paragraph {
      * @returns {string}
      */
     static get DEFAULT_ALIGNMENT() {
+        if(this.api.i18n.direction === "rtl"){
+            return Paragraph.ALIGNMENTS.right;
+        }
         return Paragraph.ALIGNMENTS.left;
     }
 
